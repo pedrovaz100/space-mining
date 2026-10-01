@@ -183,3 +183,10 @@ Qualquer outro valor retorna `400 Bad Request`.
 ## Evidências
 
 Screenshots e logs reais dos testes executados estão em [`docs/evidencias/`](docs/evidencias/).
+
+
+
+##  Nomes
+
+- Pedro Vaz - RM 566551
+- João Victor luiz oliveira resende - RM 565139

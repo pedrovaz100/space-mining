@@ -1,0 +1,95 @@
+{
+  "info": {
+    "name": "Space Mining API",
+    "description": "Coleção de testes da API do Space Mining (CommandService -> ValidatorService -> RabbitMQ -> MiningService).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "POST /command - LEFT (valido)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"command\": \"LEFT\"\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/command", "host": ["{{baseUrl}}"], "path": ["command"] }
+      }
+    },
+    {
+      "name": "POST /command - RIGHT (valido)",
+      "request": {
+        "method": "POST",
+        "header": [ { "key": "Content-Type", "value": "application/json" } ],
+        "body": { "mode": "raw", "raw": "{\n  \"command\": \"RIGHT\"\n}" },
+        "url": { "raw": "{{baseUrl}}/command", "host": ["{{baseUrl}}"], "path": ["command"] }
+      }
+    },
+    {
+      "name": "POST /command - FRONT (valido)",
+      "request": {
+        "method": "POST",
+        "header": [ { "key": "Content-Type", "value": "application/json" } ],
+        "body": { "mode": "raw", "raw": "{\n  \"command\": \"FRONT\"\n}" },
+        "url": { "raw": "{{baseUrl}}/command", "host": ["{{baseUrl}}"], "path": ["command"] }
+      }
+    },
+    {
+      "name": "POST /command - BACK (valido)",
+      "request": {
+        "method": "POST",
+        "header": [ { "key": "Content-Type", "value": "application/json" } ],
+        "body": { "mode": "raw", "raw": "{\n  \"command\": \"BACK\"\n}" },
+        "url": { "raw": "{{baseUrl}}/command", "host": ["{{baseUrl}}"], "path": ["command"] }
+      }
+    },
+    {
+      "name": "POST /command - OPEN (valido)",
+      "request": {
+        "method": "POST",
+        "header": [ { "key": "Content-Type", "value": "application/json" } ],
+        "body": { "mode": "raw", "raw": "{\n  \"command\": \"OPEN\"\n}" },
+        "url": { "raw": "{{baseUrl}}/command", "host": ["{{baseUrl}}"], "path": ["command"] }
+      }
+    },
+    {
+      "name": "POST /command - CLOSE (valido)",
+      "request": {
+        "method": "POST",
+        "header": [ { "key": "Content-Type", "value": "application/json" } ],
+        "body": { "mode": "raw", "raw": "{\n  \"command\": \"CLOSE\"\n}" },
+        "url": { "raw": "{{baseUrl}}/command", "host": ["{{baseUrl}}"], "path": ["command"] }
+      }
+    },
+    {
+      "name": "POST /command - comando invalido",
+      "request": {
+        "method": "POST",
+        "header": [ { "key": "Content-Type", "value": "application/json" } ],
+        "body": { "mode": "raw", "raw": "{\n  \"command\": \"JUMP\"\n}" },
+        "url": { "raw": "{{baseUrl}}/command", "host": ["{{baseUrl}}"], "path": ["command"] }
+      }
+    },
+    {
+      "name": "POST /command - body vazio",
+      "request": {
+        "method": "POST",
+        "header": [ { "key": "Content-Type", "value": "application/json" } ],
+        "body": { "mode": "raw", "raw": "{}" },
+        "url": { "raw": "{{baseUrl}}/command", "host": ["{{baseUrl}}"], "path": ["command"] }
+      }
+    },
+    {
+      "name": "POST /command - sem body (JSON malformado)",
+      "request": {
+        "method": "POST",
+        "header": [ { "key": "Content-Type", "value": "application/json" } ],
+        "body": { "mode": "raw", "raw": "" },
+        "url": { "raw": "{{baseUrl}}/command", "host": ["{{baseUrl}}"], "path": ["command"] }
+      }
+    }
+  ]
+}

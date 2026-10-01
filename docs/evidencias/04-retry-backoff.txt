@@ -1,0 +1,70 @@
+=== Evidencia real: retry com exponential backoff no Validator Service ===
+Fonte: log real (stdout) do processo validator-service durante os testes via Postman/Newman e curl.
+Cada 'Falha simulada' e uma tentativa que caiu nos ~50% de chance de erro simulado;
+o retry com exponential backoff (delay inicial 500ms, multiplier 2, ate 5 tentativas) refaz a chamada
+automaticamente ate ter sucesso ou esgotar as tentativas.
+
+Exemplo notavel (comando OPEN, 4 falhas seguidas antes do sucesso, backoff crescente ~543ms/903ms/1939ms/3226ms):
+17:19:03.906 Falha simulada: OPEN
+17:19:04.449 Falha simulada: OPEN   (+543ms)
+17:19:05.352 Falha simulada: OPEN   (+903ms)
+17:19:07.291 Falha simulada: OPEN   (+1939ms)
+17:19:10.517 Comando OPEN passou    (+3226ms)
+
+=== Log completo (timestamps reais) ===
+2026-09-24T17:13:55.086-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-1] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: LEFT
+2026-09-24T17:13:55.676-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-1] b.c.f.v.ValidationRetryService           : ? Comando LEFT passou na validação simulada
+2026-09-24T17:14:07.568-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-3] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: LEFT
+2026-09-24T17:14:08.160-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-3] b.c.f.v.ValidationRetryService           : ? Comando LEFT passou na validação simulada
+2026-09-24T17:14:51.167-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-4] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:14:51.556-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-5] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:14:51.930-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-6] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: FRONT
+2026-09-24T17:14:52.488-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-6] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:15:00.682-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-7] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:15:25.436-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-8] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: FRONT
+2026-09-24T17:15:25.952-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-8] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: FRONT
+2026-09-24T17:15:26.864-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-8] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: FRONT
+2026-09-24T17:15:28.564-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-8] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:15:28.945-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-9] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:15:29.333-03:00  INFO 19276 --- [validator-service] [io-8081-exec-10] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:15:29.721-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-1] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: FRONT
+2026-09-24T17:15:30.266-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-1] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: FRONT
+2026-09-24T17:15:31.085-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-1] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: FRONT
+2026-09-24T17:15:33.234-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-1] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:15:33.611-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-2] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: FRONT
+2026-09-24T17:15:34.174-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-2] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:15:34.561-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-3] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: FRONT
+2026-09-24T17:15:35.167-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-3] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:15:35.544-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-4] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:15:35.934-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-5] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: FRONT
+2026-09-24T17:15:36.531-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-5] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: FRONT
+2026-09-24T17:15:37.604-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-5] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: FRONT
+2026-09-24T17:15:40.068-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-5] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:15:40.459-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-6] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: FRONT
+2026-09-24T17:15:40.967-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-6] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:15:41.348-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-7] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:15:41.753-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-8] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: FRONT
+2026-09-24T17:15:42.299-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-8] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:19:01.623-03:00  INFO 19276 --- [validator-service] [io-8081-exec-10] b.c.f.v.ValidationRetryService           : ? Comando LEFT passou na validação simulada
+2026-09-24T17:19:02.053-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-1] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: RIGHT
+2026-09-24T17:19:02.592-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-1] b.c.f.v.ValidationRetryService           : ? Comando RIGHT passou na validação simulada
+2026-09-24T17:19:03.034-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-2] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:19:03.468-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-3] b.c.f.v.ValidationRetryService           : ? Comando BACK passou na validação simulada
+2026-09-24T17:19:03.906-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-4] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: OPEN
+2026-09-24T17:19:04.449-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-4] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: OPEN
+2026-09-24T17:19:05.352-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-4] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: OPEN
+2026-09-24T17:19:07.291-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-4] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: OPEN
+2026-09-24T17:19:10.517-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-4] b.c.f.v.ValidationRetryService           : ? Comando OPEN passou na validação simulada
+2026-09-24T17:19:11.206-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-5] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: CLOSE
+2026-09-24T17:19:11.791-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-5] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: CLOSE
+2026-09-24T17:19:12.670-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-5] b.c.f.v.ValidationRetryService           : ? Comando CLOSE passou na validação simulada
+2026-09-24T17:19:30.164-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-8] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: LEFT
+2026-09-24T17:19:30.678-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-8] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: LEFT
+2026-09-24T17:19:31.487-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-8] b.c.f.v.ValidationRetryService           : ? Comando LEFT passou na validação simulada
+2026-09-24T17:19:31.929-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-9] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: RIGHT
+2026-09-24T17:19:32.527-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-9] b.c.f.v.ValidationRetryService           : ? Comando RIGHT passou na validação simulada
+2026-09-24T17:19:32.957-03:00  INFO 19276 --- [validator-service] [io-8081-exec-10] b.c.f.v.ValidationRetryService           : ? Comando FRONT passou na validação simulada
+2026-09-24T17:19:33.375-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-1] b.c.f.v.ValidationRetryService           : ? Comando BACK passou na validação simulada
+2026-09-24T17:19:33.812-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-2] b.c.f.v.ValidationRetryService           : ? Comando OPEN passou na validação simulada
+2026-09-24T17:19:34.249-03:00  WARN 19276 --- [validator-service] [nio-8081-exec-3] b.c.f.v.ValidationRetryService           : ? Falha simulada na validação do comando: CLOSE
+2026-09-24T17:19:34.810-03:00  INFO 19276 --- [validator-service] [nio-8081-exec-3] b.c.f.v.ValidationRetryService           : ? Comando CLOSE passou na validação simulada

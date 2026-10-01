@@ -1,0 +1,50 @@
+newman
+
+Space Mining API
+
+→ POST /command - LEFT (valido)
+  POST http://localhost:8090/command [202 Accepted, 214B, 1355ms]
+
+→ POST /command - RIGHT (valido)
+  POST http://localhost:8090/command [202 Accepted, 215B, 619ms]
+
+→ POST /command - FRONT (valido)
+  POST http://localhost:8090/command [202 Accepted, 215B, 23ms]
+
+→ POST /command - BACK (valido)
+  POST http://localhost:8090/command [202 Accepted, 214B, 20ms]
+
+→ POST /command - OPEN (valido)
+  POST http://localhost:8090/command [202 Accepted, 214B, 21ms]
+
+→ POST /command - CLOSE (valido)
+  POST http://localhost:8090/command [202 Accepted, 215B, 584ms]
+
+→ POST /command - comando invalido
+  POST http://localhost:8090/command [400 Bad Request, 237B, 22ms]
+
+→ POST /command - body vazio
+  POST http://localhost:8090/command [400 Bad Request, 237B, 12ms]
+
+→ POST /command - sem body (JSON malformado)
+  POST http://localhost:8090/command [400 Bad Request, 237B, 6ms]
+
+┌─────────────────────────┬────────────────────┬────────────────────┐
+│                         │           executed │             failed │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│              iterations │                  1 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│                requests │                  9 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│            test-scripts │                  0 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│      prerequest-scripts │                  0 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│              assertions │                  0 │                  0 │
+├─────────────────────────┴────────────────────┴────────────────────┤
+│ total run duration: 6.3s                                          │
+├───────────────────────────────────────────────────────────────────┤
+│ total data received: 594B (approx)                                │
+├───────────────────────────────────────────────────────────────────┤
+│ average response time: 295ms [min: 6ms, max: 1355ms, s.d.: 444ms] │
+└───────────────────────────────────────────────────────────────────┘

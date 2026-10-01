@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Space Mining - API Tester</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Arial, sans-serif; background:#1e1e2e; color:#e0e0e0; margin:0; padding:24px; }
+  h1 { font-size:20px; margin:0 0 4px; }
+  .sub { color:#9aa0ac; font-size:13px; margin-bottom:20px; }
+  .bar { display:flex; gap:8px; margin-bottom:14px; }
+  .method { background:#2e7d32; color:#fff; font-weight:bold; padding:8px 14px; border-radius:4px; font-size:14px; }
+  .url { flex:1; background:#2a2a3c; border:1px solid #44445a; border-radius:4px; padding:8px 12px; font-family:monospace; font-size:14px; color:#e0e0e0; }
+  .presets { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
+  .presets button { background:#33334a; color:#e0e0e0; border:1px solid #4a4a66; padding:6px 12px; border-radius:4px; cursor:pointer; font-size:13px; }
+  .presets button:hover { background:#44446a; }
+  textarea { width:100%; box-sizing:border-box; background:#2a2a3c; color:#e0e0e0; border:1px solid #44445a; border-radius:4px; padding:10px; font-family:monospace; font-size:14px; min-height:80px; }
+  .send { margin-top:10px; background:#ff6d00; color:#fff; border:none; padding:10px 24px; border-radius:4px; font-size:14px; font-weight:bold; cursor:pointer; }
+  .send:hover { background:#ff8f00; }
+  .panel { margin-top:24px; background:#252536; border:1px solid #3a3a52; border-radius:6px; padding:16px; }
+  .panel h2 { font-size:14px; margin:0 0 10px; color:#9aa0ac; text-transform:uppercase; letter-spacing:0.5px; }
+  .status-row { display:flex; align-items:center; gap:16px; margin-bottom:12px; }
+  .status { font-size:22px; font-weight:bold; padding:4px 12px; border-radius:4px; }
+  .status.ok { background:#1b5e20; color:#a5d6a7; }
+  .status.err { background:#7f1d1d; color:#fca5a5; }
+  .meta { color:#9aa0ac; font-size:13px; }
+  pre { background:#1a1a28; padding:12px; border-radius:4px; overflow:auto; font-size:13px; margin:0; }
+  .label { color:#9aa0ac; font-size:12px; margin-bottom:4px; }
+  .req-name { font-size:16px; font-weight:bold; margin-bottom:10px; color:#fff; }
+</style>
+</head>
+<body>
+  <h1>🪐 Space Mining &mdash; API Tester</h1>
+  <div class="sub">Cliente HTTP simples rodando na mesma origem do Command Service (sem CORS), usado para validar a API manualmente pelo navegador.</div>
+
+  <div class="req-name" id="reqName">Requisição customizada</div>
+  <div class="bar">
+    <div class="method">POST</div>
+    <div class="url" id="urlBar"></div>
+  </div>
+
+  <div class="presets">
+    <button onclick="preset('LEFT ✔ válido','{&quot;command&quot;: &quot;LEFT&quot;}')">LEFT</button>
+    <button onclick="preset('RIGHT ✔ válido','{&quot;command&quot;: &quot;RIGHT&quot;}')">RIGHT</button>
+    <button onclick="preset('FRONT ✔ válido','{&quot;command&quot;: &quot;FRONT&quot;}')">FRONT</button>
+    <button onclick="preset('BACK ✔ válido','{&quot;command&quot;: &quot;BACK&quot;}')">BACK</button>
+    <button onclick="preset('OPEN ✔ válido','{&quot;command&quot;: &quot;OPEN&quot;}')">OPEN</button>
+    <button onclick="preset('CLOSE ✔ válido','{&quot;command&quot;: &quot;CLOSE&quot;}')">CLOSE</button>
+    <button onclick="preset('Comando inválido (JUMP)','{&quot;command&quot;: &quot;JUMP&quot;}')">Inválido (JUMP)</button>
+    <button onclick="preset('Body vazio','{}')">Body vazio</button>
+    <button onclick="preset('JSON malformado','nao-e-json')">JSON malformado</button>
+  </div>
+
+  <div class="label">Body enviado:</div>
+  <textarea id="body">{"command": "LEFT"}</textarea>
+  <br>
+  <button class="send" onclick="send()">Enviar ▶</button>
+
+  <div class="panel" id="panel" style="display:none">
+    <h2>Resposta</h2>
+    <div class="status-row">
+      <div class="status" id="status"></div>
+      <div class="meta" id="meta"></div>
+    </div>
+    <div class="label">Response body:</div>
+    <pre id="responseBody"></pre>
+  </div>
+
+<script>
+  const url = window.location.origin + '/command';
+  document.getElementById('urlBar').textContent = url;
+
+  function preset(name, body) {
+    document.getElementById('reqName').textContent = name;
+    document.getElementById('body').value = body;
+  }
+
+  async function send() {
+    const bodyText = document.getElementById('body').value;
+    const panel = document.getElementById('panel');
+    const statusEl = document.getElementById('status');
+    const metaEl = document.getElementById('meta');
+    const respEl = document.getElementById('responseBody');
+    panel.style.display = 'block';
+    statusEl.textContent = '...';
+    statusEl.className = 'status';
+    metaEl.textContent = '';
+    respEl.textContent = '';
+
+    const start = performance.now();
+    try {
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: bodyText
+      });
+      const elapsed = Math.round(performance.now() - start);
+      const text = await res.text();
+      statusEl.textContent = res.status + ' ' + res.statusText;
+      statusEl.className = 'status ' + (res.ok ? 'ok' : 'err');
+      metaEl.textContent = 'Tempo: ' + elapsed + 'ms  |  ' + new Date().toLocaleString('pt-BR');
+      try {
+        respEl.textContent = JSON.stringify(JSON.parse(text), null, 2);
+      } catch (e) {
+        respEl.textContent = text;
+      }
+    } catch (e) {
+      const elapsed = Math.round(performance.now() - start);
+      statusEl.textContent = 'ERRO DE REDE';
+      statusEl.className = 'status err';
+      metaEl.textContent = 'Tempo: ' + elapsed + 'ms';
+      respEl.textContent = String(e);
+    }
+  }
+</script>
+</body>
+</html>

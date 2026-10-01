@@ -1,0 +1,60 @@
+### GET - ver contagem de comandos no banco (H2 Console)
+# Acesse: http://localhost:8082/h2-console
+# JDBC URL: jdbc:h2:mem:mining-service
+# User: sa | Password: (vazio)
+
+### POST - enviar comando LEFT
+POST http://localhost:8080/command
+Content-Type: application/json
+
+{
+  "command": "LEFT"
+}
+
+### POST - enviar comando RIGHT
+POST http://localhost:8080/command
+Content-Type: application/json
+
+{
+  "command": "RIGHT"
+}
+
+### POST - enviar comando FRONT
+POST http://localhost:8080/command
+Content-Type: application/json
+
+{
+  "command": "FRONT"
+}
+
+### POST - enviar comando BACK
+POST http://localhost:8080/command
+Content-Type: application/json
+
+{
+  "command": "BACK"
+}
+
+### POST - enviar comando OPEN
+POST http://localhost:8080/command
+Content-Type: application/json
+
+{
+  "command": "OPEN"
+}
+
+### POST - enviar comando CLOSE
+POST http://localhost:8080/command
+Content-Type: application/json
+
+{
+  "command": "CLOSE"
+}
+
+### POST - comando inválido (deve retornar 400)
+POST http://localhost:8080/command
+Content-Type: application/json
+
+{
+  "command": "INVALID"
+}

@@ -1,0 +1,63 @@
+=== Evidencia real: Mining Service consumindo a fila e persistindo no banco ===
+Fonte: log real (stdout) do processo mining-service (reiniciado com banco H2 limpo antes dos testes deliberados).
+
+Hibernate: drop table if exists command_count cascade 
+Hibernate: create table command_count (total_executions integer, command varchar(255) not null, primary key (command))
+2026-09-24T17:12:42.374-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Robô executando comando: LEFT
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: insert into command_count (total_executions,command) values (?,?)
+2026-09-24T17:12:42.514-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Comando LEFT registrado. Total de execuções: 1
+2026-09-24T17:12:50.641-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Robô executando comando: RIGHT
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: insert into command_count (total_executions,command) values (?,?)
+2026-09-24T17:12:50.644-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Comando RIGHT registrado. Total de execuções: 1
+2026-09-24T17:12:50.938-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Robô executando comando: FRONT
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: insert into command_count (total_executions,command) values (?,?)
+2026-09-24T17:12:50.940-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Comando FRONT registrado. Total de execuções: 1
+2026-09-24T17:12:51.234-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Robô executando comando: BACK
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: insert into command_count (total_executions,command) values (?,?)
+2026-09-24T17:12:51.238-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Comando BACK registrado. Total de execuções: 1
+2026-09-24T17:12:54.962-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Robô executando comando: OPEN
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: insert into command_count (total_executions,command) values (?,?)
+2026-09-24T17:12:54.965-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Comando OPEN registrado. Total de execuções: 1
+2026-09-24T17:12:58.626-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Robô executando comando: CLOSE
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: insert into command_count (total_executions,command) values (?,?)
+2026-09-24T17:12:58.628-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Comando CLOSE registrado. Total de execuções: 1
+2026-09-24T17:13:58.493-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Robô executando comando: LEFT
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: update command_count set total_executions=? where command=?
+2026-09-24T17:13:58.506-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Comando LEFT registrado. Total de execuções: 2
+2026-09-24T17:14:08.163-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Robô executando comando: LEFT
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: update command_count set total_executions=? where command=?
+2026-09-24T17:14:08.166-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Comando LEFT registrado. Total de execuções: 3
+2026-09-24T17:14:51.916-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Robô executando comando: FRONT
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: update command_count set total_executions=? where command=?
+2026-09-24T17:14:51.918-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Comando FRONT registrado. Total de execuções: 2
+2026-09-24T17:14:51.921-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Robô executando comando: FRONT
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: update command_count set total_executions=? where command=?
+2026-09-24T17:14:51.923-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Comando FRONT registrado. Total de execuções: 3
+2026-09-24T17:15:00.464-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Robô executando comando: FRONT
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: update command_count set total_executions=? where command=?
+2026-09-24T17:15:00.467-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Comando FRONT registrado. Total de execuções: 4
+2026-09-24T17:15:22.829-03:00  INFO 18632 --- [mining-service] [ntContainer#0-1] b.com.fiap.miningservice.MiningConsumer  : ? Robô executando comando: FRONT
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?
+Hibernate: select cc1_0.command,cc1_0.total_executions from command_count cc1_0 where cc1_0.command=?

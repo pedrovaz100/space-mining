@@ -1,0 +1,2211 @@
+{
+  "collection": {
+    "item": [
+      {
+        "id": "0609fb9d-93f7-4181-9555-1f70230f2a5f",
+        "name": "POST /command - LEFT (valido)",
+        "request": {
+          "url": {
+            "path": [
+              "command"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"command\": \"LEFT\"\n}"
+          }
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "80620dcb-bf62-4acc-97dd-415def17dfdb",
+        "name": "POST /command - RIGHT (valido)",
+        "request": {
+          "url": {
+            "path": [
+              "command"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"command\": \"RIGHT\"\n}"
+          }
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "65790439-1cac-461b-94b9-91bbc4347764",
+        "name": "POST /command - FRONT (valido)",
+        "request": {
+          "url": {
+            "path": [
+              "command"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"command\": \"FRONT\"\n}"
+          }
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "223a05c2-ff7c-4b72-a203-3a47fca2000f",
+        "name": "POST /command - BACK (valido)",
+        "request": {
+          "url": {
+            "path": [
+              "command"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"command\": \"BACK\"\n}"
+          }
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "0fd066ac-804c-42b9-8a03-b5ad88e8b685",
+        "name": "POST /command - OPEN (valido)",
+        "request": {
+          "url": {
+            "path": [
+              "command"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"command\": \"OPEN\"\n}"
+          }
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "f0b174ad-686a-4785-bc86-b0f24106c6b7",
+        "name": "POST /command - CLOSE (valido)",
+        "request": {
+          "url": {
+            "path": [
+              "command"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"command\": \"CLOSE\"\n}"
+          }
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "ef3a6bb9-f165-4a29-a461-0bd174dbe5c1",
+        "name": "POST /command - comando invalido",
+        "request": {
+          "url": {
+            "path": [
+              "command"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"command\": \"JUMP\"\n}"
+          }
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "6446d2de-1ae9-4c5f-8cdd-c95099a09bcf",
+        "name": "POST /command - body vazio",
+        "request": {
+          "url": {
+            "path": [
+              "command"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{}"
+          }
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "cfb390ed-e21b-4ef5-9969-6e92190fc63d",
+        "name": "POST /command - sem body (JSON malformado)",
+        "request": {
+          "url": {
+            "path": [
+              "command"
+            ],
+            "host": [
+              "{{baseUrl}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": ""
+          }
+        },
+        "response": [],
+        "event": []
+      }
+    ],
+    "event": [],
+    "variable": [],
+    "info": {
+      "_postman_id": "be2519f0-f877-4566-9948-a4f25922041f",
+      "name": "Space Mining API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "description": {
+        "content": "Coleção de testes da API do Space Mining (CommandService -> ValidatorService -> RabbitMQ -> MiningService).",
+        "type": "text/plain"
+      }
+    }
+  },
+  "environment": {
+    "id": "621e7b21-ca6c-4591-8e1d-6213ba81552c",
+    "name": "Space Mining - Local Test",
+    "values": [
+      {
+        "type": "any",
+        "value": "http://localhost:8090",
+        "key": "baseUrl"
+      }
+    ]
+  },
+  "globals": {
+    "id": "0b7adfca-550c-4901-b552-e6e833f48948",
+    "values": []
+  },
+  "run": {
+    "stats": {
+      "iterations": {
+        "total": 1,
+        "pending": 0,
+        "failed": 0
+      },
+      "items": {
+        "total": 9,
+        "pending": 0,
+        "failed": 0
+      },
+      "scripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequests": {
+        "total": 9,
+        "pending": 0,
+        "failed": 0
+      },
+      "requests": {
+        "total": 9,
+        "pending": 0,
+        "failed": 0
+      },
+      "tests": {
+        "total": 9,
+        "pending": 0,
+        "failed": 0
+      },
+      "assertions": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "testScripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequestScripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      }
+    },
+    "timings": {
+      "responseAverage": 295.77777777777777,
+      "responseMin": 6,
+      "responseMax": 1355,
+      "responseSd": 444.0865225450699,
+      "dnsAverage": 0,
+      "dnsMin": 0,
+      "dnsMax": 0,
+      "dnsSd": 0,
+      "firstByteAverage": 0,
+      "firstByteMin": 0,
+      "firstByteMax": 0,
+      "firstByteSd": 0,
+      "started": 1790281169767,
+      "completed": 1790281176083
+    },
+    "executions": [
+      {
+        "cursor": {
+          "position": 0,
+          "iteration": 0,
+          "length": 9,
+          "cycles": 1,
+          "empty": false,
+          "eof": false,
+          "bof": true,
+          "cr": false,
+          "ref": "07437da9-0149-4d8f-b0a7-3b759aff3b6b",
+          "httpRequestId": "79db9271-4dc7-4510-ac8a-48d38c291c21"
+        },
+        "item": {
+          "id": "0609fb9d-93f7-4181-9555-1f70230f2a5f",
+          "name": "POST /command - LEFT (valido)",
+          "request": {
+            "url": {
+              "path": [
+                "command"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"command\": \"LEFT\"\n}"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "8090",
+            "path": [
+              "command"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "f2beb0fa-c86f-4242-9b48-a042f1dcc6e8",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:8090",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "23",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"command\": \"LEFT\"\n}"
+          }
+        },
+        "response": {
+          "id": "49468b1c-fc6c-41c2-bcb7-7d79b6c71f53",
+          "status": "Accepted",
+          "code": 202,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "52"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:19:31 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
+              34,
+              67,
+              111,
+              109,
+              97,
+              110,
+              100,
+              111,
+              32,
+              76,
+              69,
+              70,
+              84,
+              32,
+              101,
+              110,
+              118,
+              105,
+              97,
+              100,
+              111,
+              32,
+              112,
+              97,
+              114,
+              97,
+              32,
+              112,
+              114,
+              111,
+              99,
+              101,
+              115,
+              115,
+              97,
+              109,
+              101,
+              110,
+              116,
+              111,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 1355,
+          "responseSize": 52
+        },
+        "id": "0609fb9d-93f7-4181-9555-1f70230f2a5f"
+      },
+      {
+        "cursor": {
+          "ref": "b5ae3223-a7b4-498c-8d4b-a1601e3bb6e1",
+          "length": 9,
+          "cycles": 1,
+          "position": 1,
+          "iteration": 0,
+          "httpRequestId": "a6dd93ea-369e-423c-9d58-d7bff8a5dc88"
+        },
+        "item": {
+          "id": "80620dcb-bf62-4acc-97dd-415def17dfdb",
+          "name": "POST /command - RIGHT (valido)",
+          "request": {
+            "url": {
+              "path": [
+                "command"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"command\": \"RIGHT\"\n}"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "8090",
+            "path": [
+              "command"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "3af80f25-5497-4f81-bb34-56350786ad7f",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:8090",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "24",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"command\": \"RIGHT\"\n}"
+          }
+        },
+        "response": {
+          "id": "6a4f5908-12fa-4569-8fc1-1aa0826311ac",
+          "status": "Accepted",
+          "code": 202,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "53"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:19:32 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
+              34,
+              67,
+              111,
+              109,
+              97,
+              110,
+              100,
+              111,
+              32,
+              82,
+              73,
+              71,
+              72,
+              84,
+              32,
+              101,
+              110,
+              118,
+              105,
+              97,
+              100,
+              111,
+              32,
+              112,
+              97,
+              114,
+              97,
+              32,
+              112,
+              114,
+              111,
+              99,
+              101,
+              115,
+              115,
+              97,
+              109,
+              101,
+              110,
+              116,
+              111,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 619,
+          "responseSize": 53
+        },
+        "id": "80620dcb-bf62-4acc-97dd-415def17dfdb"
+      },
+      {
+        "cursor": {
+          "ref": "64cf442c-d6a4-491e-8705-7a5aea457328",
+          "length": 9,
+          "cycles": 1,
+          "position": 2,
+          "iteration": 0,
+          "httpRequestId": "f9cad13f-038b-465d-8c1f-01367ac18b58"
+        },
+        "item": {
+          "id": "65790439-1cac-461b-94b9-91bbc4347764",
+          "name": "POST /command - FRONT (valido)",
+          "request": {
+            "url": {
+              "path": [
+                "command"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"command\": \"FRONT\"\n}"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "8090",
+            "path": [
+              "command"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "cb3400c2-265c-4b90-b38b-135ae688fc88",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:8090",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "24",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"command\": \"FRONT\"\n}"
+          }
+        },
+        "response": {
+          "id": "8349dadc-6e20-402c-8830-2e72650c776f",
+          "status": "Accepted",
+          "code": 202,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "53"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:19:32 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
+              34,
+              67,
+              111,
+              109,
+              97,
+              110,
+              100,
+              111,
+              32,
+              70,
+              82,
+              79,
+              78,
+              84,
+              32,
+              101,
+              110,
+              118,
+              105,
+              97,
+              100,
+              111,
+              32,
+              112,
+              97,
+              114,
+              97,
+              32,
+              112,
+              114,
+              111,
+              99,
+              101,
+              115,
+              115,
+              97,
+              109,
+              101,
+              110,
+              116,
+              111,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 23,
+          "responseSize": 53
+        },
+        "id": "65790439-1cac-461b-94b9-91bbc4347764"
+      },
+      {
+        "cursor": {
+          "ref": "60372e96-7805-4fba-92c1-01d2d529b155",
+          "length": 9,
+          "cycles": 1,
+          "position": 3,
+          "iteration": 0,
+          "httpRequestId": "96f607ba-b16d-4ad4-bb25-167030974e02"
+        },
+        "item": {
+          "id": "223a05c2-ff7c-4b72-a203-3a47fca2000f",
+          "name": "POST /command - BACK (valido)",
+          "request": {
+            "url": {
+              "path": [
+                "command"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"command\": \"BACK\"\n}"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "8090",
+            "path": [
+              "command"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "2253ab29-d0c1-4595-8180-89131d196100",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:8090",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "23",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"command\": \"BACK\"\n}"
+          }
+        },
+        "response": {
+          "id": "a4d1a36a-6e4e-4bf3-a006-0180d2547571",
+          "status": "Accepted",
+          "code": 202,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "52"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:19:33 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
+              34,
+              67,
+              111,
+              109,
+              97,
+              110,
+              100,
+              111,
+              32,
+              66,
+              65,
+              67,
+              75,
+              32,
+              101,
+              110,
+              118,
+              105,
+              97,
+              100,
+              111,
+              32,
+              112,
+              97,
+              114,
+              97,
+              32,
+              112,
+              114,
+              111,
+              99,
+              101,
+              115,
+              115,
+              97,
+              109,
+              101,
+              110,
+              116,
+              111,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 20,
+          "responseSize": 52
+        },
+        "id": "223a05c2-ff7c-4b72-a203-3a47fca2000f"
+      },
+      {
+        "cursor": {
+          "ref": "3496366f-32ba-4b4f-b273-a2da568d4cca",
+          "length": 9,
+          "cycles": 1,
+          "position": 4,
+          "iteration": 0,
+          "httpRequestId": "82eb6eb4-97d0-4480-8d23-9fd240fc8748"
+        },
+        "item": {
+          "id": "0fd066ac-804c-42b9-8a03-b5ad88e8b685",
+          "name": "POST /command - OPEN (valido)",
+          "request": {
+            "url": {
+              "path": [
+                "command"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"command\": \"OPEN\"\n}"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "8090",
+            "path": [
+              "command"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "1c6820ab-78ec-4dac-834b-e35e4295f2ef",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:8090",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "23",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"command\": \"OPEN\"\n}"
+          }
+        },
+        "response": {
+          "id": "c159270f-117b-4eb1-afc7-55c42c68d61e",
+          "status": "Accepted",
+          "code": 202,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "52"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:19:33 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
+              34,
+              67,
+              111,
+              109,
+              97,
+              110,
+              100,
+              111,
+              32,
+              79,
+              80,
+              69,
+              78,
+              32,
+              101,
+              110,
+              118,
+              105,
+              97,
+              100,
+              111,
+              32,
+              112,
+              97,
+              114,
+              97,
+              32,
+              112,
+              114,
+              111,
+              99,
+              101,
+              115,
+              115,
+              97,
+              109,
+              101,
+              110,
+              116,
+              111,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 21,
+          "responseSize": 52
+        },
+        "id": "0fd066ac-804c-42b9-8a03-b5ad88e8b685"
+      },
+      {
+        "cursor": {
+          "ref": "685bbc72-2b60-46fe-8aed-d8e403f2a1d5",
+          "length": 9,
+          "cycles": 1,
+          "position": 5,
+          "iteration": 0,
+          "httpRequestId": "2471d7e2-127e-41a7-8d69-9ede73e476e6"
+        },
+        "item": {
+          "id": "f0b174ad-686a-4785-bc86-b0f24106c6b7",
+          "name": "POST /command - CLOSE (valido)",
+          "request": {
+            "url": {
+              "path": [
+                "command"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"command\": \"CLOSE\"\n}"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "8090",
+            "path": [
+              "command"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "ccefa48a-b4bd-46ad-840b-9f651296668a",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:8090",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "24",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"command\": \"CLOSE\"\n}"
+          }
+        },
+        "response": {
+          "id": "29a2f171-070d-43f4-804b-e553593d27c0",
+          "status": "Accepted",
+          "code": 202,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "53"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:19:34 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
+              34,
+              67,
+              111,
+              109,
+              97,
+              110,
+              100,
+              111,
+              32,
+              67,
+              76,
+              79,
+              83,
+              69,
+              32,
+              101,
+              110,
+              118,
+              105,
+              97,
+              100,
+              111,
+              32,
+              112,
+              97,
+              114,
+              97,
+              32,
+              112,
+              114,
+              111,
+              99,
+              101,
+              115,
+              115,
+              97,
+              109,
+              101,
+              110,
+              116,
+              111,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 584,
+          "responseSize": 53
+        },
+        "id": "f0b174ad-686a-4785-bc86-b0f24106c6b7"
+      },
+      {
+        "cursor": {
+          "ref": "7498c25e-8b1a-422a-a386-30c4460b982f",
+          "length": 9,
+          "cycles": 1,
+          "position": 6,
+          "iteration": 0,
+          "httpRequestId": "e02cc609-1bfe-4e13-af69-5ee197960798"
+        },
+        "item": {
+          "id": "ef3a6bb9-f165-4a29-a461-0bd174dbe5c1",
+          "name": "POST /command - comando invalido",
+          "request": {
+            "url": {
+              "path": [
+                "command"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"command\": \"JUMP\"\n}"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "8090",
+            "path": [
+              "command"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "1ff8b6da-e68c-4e34-b937-20f3a2114786",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:8090",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "23",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"command\": \"JUMP\"\n}"
+          }
+        },
+        "response": {
+          "id": "d61421e1-83cb-4f6d-9cf1-53a25bd3dfce",
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:19:35 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              116,
+              105,
+              109,
+              101,
+              115,
+              116,
+              97,
+              109,
+              112,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              54,
+              45,
+              48,
+              57,
+              45,
+              50,
+              52,
+              84,
+              50,
+              48,
+              58,
+              49,
+              57,
+              58,
+              51,
+              53,
+              46,
+              50,
+              52,
+              50,
+              90,
+              34,
+              44,
+              34,
+              115,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
+              52,
+              48,
+              48,
+              44,
+              34,
+              101,
+              114,
+              114,
+              111,
+              114,
+              34,
+              58,
+              34,
+              66,
+              97,
+              100,
+              32,
+              82,
+              101,
+              113,
+              117,
+              101,
+              115,
+              116,
+              34,
+              44,
+              34,
+              112,
+              97,
+              116,
+              104,
+              34,
+              58,
+              34,
+              47,
+              99,
+              111,
+              109,
+              109,
+              97,
+              110,
+              100,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 22,
+          "responseSize": 93
+        },
+        "id": "ef3a6bb9-f165-4a29-a461-0bd174dbe5c1"
+      },
+      {
+        "cursor": {
+          "ref": "aab66f68-8cc5-4aa9-af77-2f9b849e9b0f",
+          "length": 9,
+          "cycles": 1,
+          "position": 7,
+          "iteration": 0,
+          "httpRequestId": "892c9e0a-15ff-4073-b29d-150e9e4bc90c"
+        },
+        "item": {
+          "id": "6446d2de-1ae9-4c5f-8cdd-c95099a09bcf",
+          "name": "POST /command - body vazio",
+          "request": {
+            "url": {
+              "path": [
+                "command"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "8090",
+            "path": [
+              "command"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "d3b905e5-fa4c-4ffd-b17a-b7e68e288401",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:8090",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "2",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{}"
+          }
+        },
+        "response": {
+          "id": "69e30cf7-0caf-48d3-8e89-ce358579c060",
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:19:35 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              116,
+              105,
+              109,
+              101,
+              115,
+              116,
+              97,
+              109,
+              112,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              54,
+              45,
+              48,
+              57,
+              45,
+              50,
+              52,
+              84,
+              50,
+              48,
+              58,
+              49,
+              57,
+              58,
+              51,
+              53,
+              46,
+              54,
+              53,
+              53,
+              90,
+              34,
+              44,
+              34,
+              115,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
+              52,
+              48,
+              48,
+              44,
+              34,
+              101,
+              114,
+              114,
+              111,
+              114,
+              34,
+              58,
+              34,
+              66,
+              97,
+              100,
+              32,
+              82,
+              101,
+              113,
+              117,
+              101,
+              115,
+              116,
+              34,
+              44,
+              34,
+              112,
+              97,
+              116,
+              104,
+              34,
+              58,
+              34,
+              47,
+              99,
+              111,
+              109,
+              109,
+              97,
+              110,
+              100,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 12,
+          "responseSize": 93
+        },
+        "id": "6446d2de-1ae9-4c5f-8cdd-c95099a09bcf"
+      },
+      {
+        "cursor": {
+          "ref": "7c4aa393-a64e-4edb-b151-b5bdf1755164",
+          "length": 9,
+          "cycles": 1,
+          "position": 8,
+          "iteration": 0,
+          "httpRequestId": "b1b8f610-4315-496e-b64f-43cdbac6adcb"
+        },
+        "item": {
+          "id": "cfb390ed-e21b-4ef5-9969-6e92190fc63d",
+          "name": "POST /command - sem body (JSON malformado)",
+          "request": {
+            "url": {
+              "path": [
+                "command"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "8090",
+            "path": [
+              "command"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "e187b453-82bb-4778-af93-8c53799d3b58",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:8090",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "0",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": ""
+          }
+        },
+        "response": {
+          "id": "4242c407-82b8-45e2-97d8-15acf584e73a",
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 24 Sep 2026 20:19:36 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              116,
+              105,
+              109,
+              101,
+              115,
+              116,
+              97,
+              109,
+              112,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              54,
+              45,
+              48,
+              57,
+              45,
+              50,
+              52,
+              84,
+              50,
+              48,
+              58,
+              49,
+              57,
+              58,
+              51,
+              54,
+              46,
+              48,
+              53,
+              54,
+              90,
+              34,
+              44,
+              34,
+              115,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
+              52,
+              48,
+              48,
+              44,
+              34,
+              101,
+              114,
+              114,
+              111,
+              114,
+              34,
+              58,
+              34,
+              66,
+              97,
+              100,
+              32,
+              82,
+              101,
+              113,
+              117,
+              101,
+              115,
+              116,
+              34,
+              44,
+              34,
+              112,
+              97,
+              116,
+              104,
+              34,
+              58,
+              34,
+              47,
+              99,
+              111,
+              109,
+              109,
+              97,
+              110,
+              100,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 6,
+          "responseSize": 93
+        },
+        "id": "cfb390ed-e21b-4ef5-9969-6e92190fc63d"
+      }
+    ],
+    "transfers": {
+      "responseTotal": 594
+    },
+    "failures": [],
+    "error": null
+  }
+}

@@ -1,0 +1,29 @@
+HELP.md
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### IDEs ###
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+.classpath
+.project
+.settings/
+bin/
+
+out/
+
+### Logs ###
+*.log
+
+### Env / secrets ###
+.env
+
+### OS ###
+.DS_Store
+Thumbs.db
